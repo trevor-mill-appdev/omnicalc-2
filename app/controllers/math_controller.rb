@@ -19,6 +19,9 @@ class MathController < ApplicationController
   end
 
   def wizard_subtract
+    @first_num = params[:first_num].to_f
+    @second_num = params[:second_num].to_f
+    @result = @second_num - @first_num
 
     render({ :template => "math_calculations/subtract_results.html.erb"})
   end
